@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15%;
+    height: 75px;
+    line-height: 75px;
+    background: #404040;
+}
+
+nav .navig {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: .5px;
+}
+
+nav .nav-list {
+    display: flex;
+}
+
+nav .nav-list .nav-item {
+    cursor: pointer;
+    height: 100%;
+    padding: 0 30px;
+    transition: .4s;
+}
+
+nav .nav-list .nav-item:hover {
+    background: blueviolet;
+}
+
+nav .nav-list .nav-link {
+    color: #f1f1f1;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media (max-width: 935px) {
+
+    nav {
+        padding: 0 2rem;
+    }
+
+    nav .nav-list .nav-item {
+        padding: 0 20px;
+    }
+
+}
+
+@media (max-width: 675px) {
+
+    nav .nav-list {
+        display: grid;
+        position: absolute;
+        background: #404040;
+        width: 100%;
+        top: 75px;
+        left: 0;
+        transform: translateY(-100%);
+        z-index: -1;
+        transition: .6s;
+    }
+
+    nav .nav-list .nav-item {
+        padding-left: 35px;
+    }
+
+    nav .navbar-toggler {
+        display: grid !important;
+    }
+
+}
+
+nav .nav-dessus {
+    display: none;
+    height: min-content;
+    margin: 18px -10px 0 0;
+    cursor: pointer;
+}
+
+nav .nav-dessus .bar {
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background: #ffffff;
+    border-radius: 10%;
+    transition: .4s;
+}
+
+input {
+    display: none;
+}
+
+input:checked ~ nav .nav-list {
+    transform: translateY(0);
+}
+
+input:checked ~ nav .nav-dessus {
+    margin-top: 35px;
+}
+
+input:checked ~ nav .nav-dessus .bar:nth-child(1) {
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+input:checked ~ nav .nav-dessus .bar:nth-child(2) {
+    display: none;
+}
+
+input:checked ~ nav .nav-dessus .bar:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+
+/* page content */
+.page-content{
+    margin: 4%;
+}
+
+.page-content header {
+    margin-top: 10%;
+    max-width: 80%;
+
+}
+
+
+
+.total {
+    display: flex;
+    margin: auto;
+    width: 1000px;
+    display: block;
+}
+
+.total img {
+    border-radius: 666px;
+}
+
+.text img{
+    width : 300px;
+    height : 300px;
+    margin:100px;
+}
+
+.contact-flex {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.contact-flex p:first-child{
+    flex: 0 0 40%;
+}
+.contact-flex p:last-child{
+    flex: 0 0 60%;
+}
+
+.social{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px auto 0px auto;
+}
+.social img {
+    width: 40px;
+    height: 40px;
+}
+
+
+/*responsive */
+
+@media (max-width: 1024px) {
+    h {
+        color: blue;
+    }
+    .contact-flex {
+        font-size: 12px;
+
+    }
+
+    .text p {
+        vertical-align:middle;
+        display:inline-block;
+        margin:10px auto;
+        text-align:left;
+        font-size: xx-small;
+        max-width: 350px; /* j'ai défini un max-width comme sa le texte depasse pas le css et ne depasse pas au dessus de 350px de largeur */
+    }
+}
+
