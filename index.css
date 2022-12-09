@@ -191,7 +191,7 @@ input:checked ~ nav .nav-dessus .bar:nth-child(3) { /* barre n3 */
 }
 
 .bar:nth-child(3) .progress { /* barre numéro 3 */
-    width: 30%;
+    width: 50%;
 
 }
 
